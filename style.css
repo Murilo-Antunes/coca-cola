@@ -139,6 +139,13 @@ div.global img{
         filter: drop-shadow(0px 50px 30px rgba(0, 0, 0, 0.411));
     }
 
+    div.menu{
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    align-items: center;
+}
+
     div.img-coca{
         width: 20%;
     }
