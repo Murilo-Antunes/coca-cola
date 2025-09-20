@@ -9,14 +9,17 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgb(179, 4, 4), rgb(108, 1, 1) 50%, rgb(117, 2, 2) 60%, rgb(137, 41, 41)) ;
+    background: linear-gradient(rgb(179, 4, 4), rgb(108, 1, 1) 50%, rgb(95, 0, 0) 60%, rgb(66, 0, 0)) ;
     display: flex;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
 }
 
 main{
     display: flex;
     justify-content: center;
-    width: 100vw;
 }
 
 
@@ -27,28 +30,33 @@ div.menu{
     align-items: center;
 }
 
+
 p{
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
+    
+    font-variant-caps: all-petite-caps;
 }
 
 p.paragrafo-garrafa-coca-cola{
     top: 50%;
     left: 50%;
-    font-size: 50px;
+    font-size: 2.5em;
     position: absolute;
-    transform: translate(-140%,0%);
+    transform: translate(-150%,-50%);
 
-    width: 300px;
+    width: 270px;
     text-align: right;
+
+    text-shadow: 0px 3px 10px rgb(187, 187, 187);
 }
 
 
 
 div.coca-cola{
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
     align-items: center;
 }
 
@@ -59,30 +67,83 @@ div.img-coca{
 
     transform: translate(-50%, -50%);
 
-    filter: drop-shadow(0px 300px 40px rgba(0, 0, 0, 0.369));
+    filter: drop-shadow(0px 200px 30px rgba(0, 0, 0, 0.411));
+}
+
+div.img-coca img{
+    width: 70%;
 }
 
 div.logo-background{
+
     position: absolute;
     top: 50%;
     left: 50%;
-    
 
     transform: translate(-50%, -50%);
 
-
     z-index: -10;
-    opacity: 0.3;
+    opacity: 0.2;
+
+    filter: blur(3px);
 
 }
 
+div.logo-background img{
+    width: 100vw;
+}
+
 footer{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 10px 50px;
+    position: absolute;
+    top: 85%;
+    left: 85%;
 }
 
 div.global img{
     width: 100px;
+}
+
+@media(max-width:768px){
+    p.paragrafo-garrafa-coca-cola{
+        margin-bottom: 20px;
+        top: 17%;
+        left: 50%;
+        font-size: 2em;
+        position: absolute;
+        transform: translate(-50%,-50%);
+
+        width: 250px;
+        text-align: left;
+
+        text-shadow: 0px 3px 10px rgb(187, 187, 187);
+    }
+
+    footer{
+        position: absolute;
+        top: 90%;
+        left: 80%;
+    }
+
+    div.img-coca{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        filter: drop-shadow(0px 50px 30px rgba(0, 0, 0, 0.411));
+    }
+
+    div.img-coca img{
+        width: 60%;
+    }
+
+    div.menu{
+        margin-top: 20px;
+    }
+    
+
+    div.menu img{
+        width: 8vw;
+    }
 }
